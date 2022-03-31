@@ -21,15 +21,18 @@ class Course:
 
     def get_avarage_grade(self):
         value = 0
-        for Student in self.students:
-            value += Student.get_grade()
+        for student in self.students:
+            value += student.get_grade()
+
+        return value / len(self.students)
 
 s1 = Student("TIm", 19, 99)
 s2 = Student("Bill", 19,67)
-s1 = Student("Tomy", 19, 34)
+s3 = Student("Tomy", 19, 34)
 
 course = Course("Science", 2)
 course.add_student(s1)
 course.add_student(s2)
 
+print(course.add_student(s3))
 print(course.students[0].name)
