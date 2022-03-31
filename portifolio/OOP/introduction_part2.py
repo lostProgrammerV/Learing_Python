@@ -20,7 +20,9 @@ class Course:
         return False
 
     def get_avarage_grade(self):
-        pass
+        value = 0
+        for Student in self.students:
+            value += Student.get_grade()
 
 s1 = Student("TIm", 19, 99)
 s2 = Student("Bill", 19,67)
@@ -29,3 +31,5 @@ s1 = Student("Tomy", 19, 34)
 course = Course("Science", 2)
 course.add_student(s1)
 course.add_student(s2)
+
+print(course.students[0].name)
