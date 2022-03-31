@@ -22,8 +22,10 @@ class Course:
     def get_avarage_grade(self):
         pass
 
+s1 = Student("TIm", 19, 99)
+s2 = Student("Bill", 19,67)
+s1 = Student("Tomy", 19, 34)
 
-
-
-
-
+course = Course("Science", 2)
+course.add_student(s1)
+course.add_student(s2)
