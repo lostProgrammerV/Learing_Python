@@ -10,6 +10,10 @@ class Pet:
         print("Idk what I say")
 
 class Cat(Pet):
+    def __init__(self, name, age, color):
+        super().__init__(name, age)
+        self.color = color
+
     def speak(self):
         print("Meow")
 
