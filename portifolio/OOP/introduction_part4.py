@@ -7,4 +7,6 @@ class Person:
 p1 = Person("Aler")
 p2 = Person("Jill")
 
+Person.number_of_people = 8
 
+print(p2.number_of_people)
