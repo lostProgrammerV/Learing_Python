@@ -6,10 +6,10 @@ class Pet:
     def show(self):
         print(f"I'm {self.name} and I'm {self.age} years old")    
 
-class Cat:
+class Cat(Pet):
     def speak(self):
         print("Meow")
 
-class Dog:
+class Dog(Pet):
     def speak(self):
         print("Bark")
