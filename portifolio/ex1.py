@@ -4,14 +4,15 @@ from audioop import add
 pwd = str(input("What's the master password ? "))
 
 def view():
-        pass
-
+        with open('password.txt', 'r') as f:
+            for line in r.readlines():
+                print(line.rstrip())
 def add():
  name = str(input("Account name: "))
  pwd = str(input("Password: "))
-
-with open('passwords.txt', 'a') as f:
-    f.write(name + " " + pwd)
+ 
+ with open('passwords.txt', 'a') as f:
+    f.write(name + " | " + pwd)
 
 while True:
     mode = str(input("Would you like to add a new password "))
@@ -19,7 +20,7 @@ while True:
         break
     
     if mode == "view":
-        View
+        view()
     elif mode == "add":
         add()
     else:
