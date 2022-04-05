@@ -7,8 +7,8 @@ def view():
         with open('password.txt', 'r') as f:
             for line in r.readlines():
                 data = line.rstrip()
-                user, passw = data.split("")
-
+                user, passw = data.split("|")
+                print("User:",user,"| Password:",passw)
 
 def add():
  name = str(input("Account name: "))
@@ -18,13 +18,14 @@ def add():
     f.write(name + " | " + pwd)
 
 while True:
-    mode = str(input("Would you like to add a new password "))
+    mode = str(input("""Would you like to add a new password 
+    v(to view), a(to add) and q(to quit)"""))
     if mode == "q":
         break
     
-    if mode == "view":
+    if mode == "view" or "v":
         view()
-    elif mode == "add":
+    elif mode == "add" or "a":
         add()
     else:
         print("invalid mode")
