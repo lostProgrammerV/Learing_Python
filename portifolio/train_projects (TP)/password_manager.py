@@ -42,8 +42,3 @@ while True:
         add()
     else:
         print("invalid mode")
-
-
-
-
-
