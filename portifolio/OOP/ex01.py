@@ -20,7 +20,7 @@ class Quiz:
             print("Incorrect")
 
         anwser = str(input("What does PSU stand for ?"))
-        if anwser == " ":
+        if anwser == "Power supply":
             print("Correct")
         else:
             print("Incorrect")
