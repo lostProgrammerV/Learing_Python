@@ -10,6 +10,9 @@ class View:
 class Add:
     def add():
         name = str(input("Account name: "))
+        pwd = str(input("Password: "))
+
+        with open('passwords.txt', 'a') as f:
 
 while True:
     mode = str(input("Would youi like to add a new password"))
