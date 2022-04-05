@@ -6,6 +6,24 @@ class Quiz:
             print("Correct")
         else:
             print("Incorrect")
+        
+        anwser = str(input("What does GPU stand for ?"))
+        if anwser == "Graphics processing unit":
+            print("Correct")
+        else:
+            print("Incorrect")
+
+        anwser = str(input("What does RAM stand for ?"))
+        if anwser == "Random access memory":
+            print("Correct")
+        else:
+            print("Incorrect")
+
+        anwser = str(input("What does PSU stand for ?"))
+        if anwser == " ":
+            print("Correct")
+        else:
+            print("Incorrect")
 
     @classmethod
     def playing(anwser):
