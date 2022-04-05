@@ -1,23 +1,33 @@
-from audioop import add
+from cryptography.fernet import Fernet
 
+def load_key():
+    file = open("key.key", "rb")
+    key = file.read()
+    file.close()
+    return key
 
 master_pwd = str(input("What's the master password ? "))
+key = load_key() + master_pwd.encode()
+fer = Fernet(key)
 
-
+'''def write_key():
+    key = Fernet.generate_key()
+    with open("key.key", "wb") as key_file:
+        key_file.write(key)'''
 
 def view():
         with open('password.txt', 'r') as f:
             for line in r.readlines():
                 data = line.rstrip()
                 user, passw = data.split("|")
-                print("User:",user,"| Password:",passw)
+                print("User:",user,"| Password:",fer.decrypt(passw.encode()))
 
 def add():
  name = str(input("Account name: "))
  pwd = str(input("Password: "))
  
  with open('passwords.txt', 'a') as f:
-    f.write(name + " | " + pwd)
+    f.write(name + " | " + fer.encrypt(pwd.encode()) + "\n")
 
 while True:
     mode = str(input("""Would you like to add a new password 
