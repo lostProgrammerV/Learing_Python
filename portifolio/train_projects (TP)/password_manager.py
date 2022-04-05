@@ -1,3 +1,4 @@
+#Install pip install cryptography, before test
 from cryptography.fernet import Fernet
 
 def load_key():
