@@ -20,7 +20,8 @@ def view():
             for line in r.readlines():
                 data = line.rstrip()
                 user, passw = data.split("|")
-                print("User:",user,"| Password:",fer.decrypt(passw.encode()))
+                print("User:",user,"| Password:",
+                fer.decrypt(passw.encode()).decode())
 
 def add():
  name = str(input("Account name: "))
