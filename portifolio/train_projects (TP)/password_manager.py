@@ -1,7 +1,9 @@
 from audioop import add
 
 
-pwd = str(input("What's the master password ? "))
+master_pwd = str(input("What's the master password ? "))
+
+
 
 def view():
         with open('password.txt', 'r') as f:
