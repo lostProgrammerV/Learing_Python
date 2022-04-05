@@ -10,6 +10,7 @@ master_pwd = str(input("What's the master password ? "))
 key = load_key() + master_pwd.encode()
 fer = Fernet(key)
 
+#That part of the code stay in comment form bcs, load_key make some and better.
 '''def write_key():
     key = Fernet.generate_key()
     with open("key.key", "wb") as key_file:
