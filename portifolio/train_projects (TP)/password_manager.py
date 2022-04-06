@@ -1,4 +1,4 @@
-#Install: pip install cryptography, before test
+#Install: pip install cryptography, ahead test
 from cryptography.fernet import Fernet
 
 def load_key():
