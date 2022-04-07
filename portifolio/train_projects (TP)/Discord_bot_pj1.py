@@ -29,11 +29,14 @@ async def send_hi(msg):
 
 @tasks.loop(minutes = 3)
 async def current_time():
-    now = datetime.now
+    now = datetime.now()
     
     now = now.strftime("%d/%m/%y as %H:%M:%S")
 
+    await channel.send('current time: ' + now)
+
     channel = bot.get_channel()
+current_time.star()
 
 bot.run("OTYxMzQ4NDEzMjg1MzU1NjEw.Yk3reg.GH74i7Qb2ZNr02vqHOghLUMyPGM")
 
