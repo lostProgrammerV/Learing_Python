@@ -1,11 +1,11 @@
 
-import discord
-from discord.ext import commads
+import discord_bot_pj1
+from discord_bot_pj1 import commads
 
-bot = comands.bot('#')
+bot = commads.bot('#')
 
 @bot.event
-async def on_ready():
+async def on_ready(): 
     print(f"I'm ready!")
 
 @bot.event
@@ -14,7 +14,11 @@ async def on_msg(msg):
         return
 
     if "motherf" or "mf" in msg.content:
-        await msg.channel.send(f'f* u too')
+        await msg.channel.send(f'f* {msg.author.name} too')
+
+        await msg.delete()
+
+    await bot.process_commands
 
 @bot.comand(name="")
 async def send_hi(msg):
