@@ -1,0 +1,10 @@
+txt = input('Insert something: ')
+
+print(f'the type that value is: {type(txt)}')
+print(f'only spaces? {txt.isspace()}')
+print(f'is a number? {txt.isnumeric()}')
+print(f'is a text? {txt.isalpha()}')
+print(f'is a alphanumeric? {txt.isalnum()}')
+print(f'is a small lette? {txt.lower()}')
+print(f'is an uppercase letter? {txt.upper()}')
+print(f'is a title? {txt.istitle()}')
