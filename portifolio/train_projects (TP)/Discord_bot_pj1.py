@@ -1,6 +1,6 @@
-
+import datetime
 import discord_bot_pj1
-from discord_bot_pj1 import commads
+from discord_bot_pj1 import commads, tasks
 
 bot = commads.bot('#')
 
@@ -26,6 +26,14 @@ async def send_hi(msg):
     anwser = "hi, " + name
 
     await msg.send(anwser)
+
+@tasks.loop(minutes = 3)
+async def current_time():
+    now = datetime.now
+    
+    now = now.strftime("%d/%m/%y as %H:%M:%S")
+
+    channel = bot.get_channel()
 
 bot.run("OTYxMzQ4NDEzMjg1MzU1NjEw.Yk3reg.GH74i7Qb2ZNr02vqHOghLUMyPGM")
 
