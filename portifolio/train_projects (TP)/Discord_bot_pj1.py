@@ -18,7 +18,7 @@ async def on_msg(msg):
 
         await msg.delete()
 
-    await bot.process_commands
+    await bot.process_commands(msg)
 
 @bot.comand(name="")
 async def send_hi(msg):
