@@ -1,1 +1,1 @@
-#All exercises in this course were adapted and translated
+#All exercises in this course were adapted and translated manually
