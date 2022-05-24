@@ -12,6 +12,6 @@ model = PegasusForConditionalGeneration.form_pretrained(model_name).to(torch_dev
 def get_reeposnse(input_text, ):
     batch = tokenizer.prepare_seq2seq_batch([input_text], truncation = True)
 
-
+#Incomplete code
 
 
