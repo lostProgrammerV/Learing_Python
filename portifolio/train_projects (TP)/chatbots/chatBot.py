@@ -56,11 +56,10 @@ def bot_reponse(user_input):
     similarity_scores = cosine_similarity(cm[-1], cm)
     simnilarity_scores_list = similarity_scores.flatten()
     index = index_sort(simnilarity_scores_list)
-    index = index[1:]
     response_flag = 0
 
     j = 0
-    for i in range(len(index[i])) > 0.0:
+    for i in range(len(index[1:])) > 0.0:
         if simnilarity_scores_list[index[i]] > 0.0:
             bot_reponse = bot_reponse + '' + sentence_list[index[i]]
             response_flag = 1
@@ -73,7 +72,7 @@ def bot_reponse(user_input):
 
         return bot_reponse
 
-    print('Doc bot: I am Doctor bot. I wil answer your queries about Choronic Kidney Disease. If you want exit, type bye')
+print('Doc bot: I am Doctor bot. I wil answer your queries about Choronic Kidney Disease. If you want exit, type bye')
 
 exit_list = ['exit', '']
 
