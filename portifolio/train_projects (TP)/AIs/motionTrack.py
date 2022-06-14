@@ -18,4 +18,6 @@ while True:
         for face in face_list.detections:
             draw.draw_detection(frame, face)
 
+    cv2.isShow("Faces on webcan", frame)        
+
 webcan.release()
